@@ -6,7 +6,19 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body >
+<head>
+  <div class="">
+    <h1>BeatsByRails</h1>
+  </div>
+  <div class="">
+    <ol>
+      <li><%= link_to "New Artist", new_artist_path  %></li>
+      <li><%= link_to "New Genre", new_genre_path  %></li>
+      <li><%= link_to "New Song", new_song_path  %></li>
+    </ol>
+  </div>
+</head>
 
 <%= yield %>
 

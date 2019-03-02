@@ -1,0 +1,27 @@
+<h1>Create Song</h1>
+<%= form_for @song do |f| %>
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :artist_id, "Artist" %>
+  <br>
+  <%= f.text_field :artist_id %>
+  <br>
+  <%= f.label :genre_id, "Genre" %>
+  <br>
+  <%= f.text_field :genre_id %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+<ol>
+  <% Genre.all.each do |genre| %>
+    <li> <%= link_to genre.id, genre %> </li>
+  <% end %>
+</ol>
+<ol>
+  <% Artist.all.each do |artist| %>
+    <li> <%= link_to artist.id, artist %> </li>
+  <% end %>
+</ol>
